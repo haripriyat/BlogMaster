@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Simple calci</title>
+	<style>
+	h2{
+		color: green;
+	}
+	img {
+		width:45px;
+		height:50px;"
+	}
+	#changeOnly {
+		width: 325px;
+    	height: 220px;
+	    background-color: lightblue;
+	}
+	p {
+		font-weight: bold;
+	}
+	
+	</style>
+</head>
+
+<body>
+<div id = "changeOnly">
+	<h2>Simple Calculator 
+		<img src="calculator.png" alt="calculator"/> 
+	</h2>
+	<form>
+	   <p>  X: <input type="text" id="x">  
+	   Y: <input type="text" id="y"> </p>
+	  <p> Choose the Arithmetic operator: </p>
+	  <input type="button"  onClick="addNums()" value="+">
+	  <input type="button"  onClick="subtractNums()" value="-">
+	  <input type="button"  onClick="multiplyNums()" value="*">
+	  <input type="button"  onClick="divideNums()" value="/">
+	</form>
+	<p>Answer : 
+		<input type="text" id="result" name="Answer" readonly="readonly"/>
+	</p>
+
+</div>
+
+<script>
+	function multiplyNums()
+	{
+		num1 = document.getElementById("x").value;
+		num2 = document.getElementById("y").value;
+		document.getElementById("result").value = num1 * num2;
+	}
+	function divideNums()
+	{
+		num3 = document.getElementById("x").value;
+		num4 = document.getElementById("y").value;
+		document.getElementById("result").value = num3 / num4;
+	}
+	function addNums()
+	{
+		num5 = document.getElementById("x").value;
+		num6 = document.getElementById("y").value;
+		document.getElementById("result").value = parseInt(num5) + parseInt(num6);
+	}
+	function subtractNums()
+	{
+		num7 = document.getElementById("x").value;
+		num8 = document.getElementById("y").value;
+		document.getElementById("result").value = num7 - num8;
+	}
+</script>
+
+</body>
+</html>
